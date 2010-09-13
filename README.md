@@ -1,6 +1,6 @@
 # Tumblrrr
 
-A wrapper for [Tumblr's API].
+A Node.JS wrapper for [Tumblr's API].
 
 Demo
 ---------
