@@ -1,6 +1,7 @@
 # Tumblrrr
 
 A wrapper for [Tumblr's API].
+v0.1.1
 
 Demo
 ---------
