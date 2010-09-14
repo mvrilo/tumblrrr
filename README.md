@@ -1,6 +1,6 @@
 # Tumblrrr
 
-A wrapper for [Tumblr's API].
+A Node.JS wrapper for [Tumblr's API].
 v0.1.1
 
 Demo
@@ -16,13 +16,13 @@ Usage
 ---------
 
     var tumblr = require('tumblrrr').Tumblr,
-        staff = tumblr('staff');
+        staff = tumblr('you');
 
 For POST-like methods you must pass email and password, otherwise it will return false.
 If the email or the password are incorrects it will return HTTP 403 (not authorized).
 
 	var tumblr = require('tumblrrr).Tumblr,
-		staff = tumblr('staff', 'you@email.com', 'password');
+		staff = tumblr('you', 'you@email.com', 'password');
 
 **_Methods:_**
 
