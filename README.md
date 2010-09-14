@@ -1,11 +1,12 @@
 # Tumblrrr
 
 A Node.JS wrapper for [Tumblr's API].
+
 v0.1.1
 
 Demo
 ---------
-	var tumblr = require('tumblrrr).Tumblr,
+	var tumblr = require('tumblrrr').Tumblr,
 		staff = tumblr('staff');
 
 	staff.read('account', function(data){
@@ -16,19 +17,19 @@ Usage
 ---------
 
     var tumblr = require('tumblrrr').Tumblr,
-        staff = tumblr('you');
+        you = tumblr('you');
 
 For POST-like methods you must pass email and password, otherwise it will return false.
 If the email or the password are incorrects it will return HTTP 403 (not authorized).
 
 	var tumblr = require('tumblrrr).Tumblr,
-		staff = tumblr('you', 'you@email.com', 'password');
+		you = tumblr('you', 'you@email.com', 'password');
 
 **_Methods:_**
 
 _read_
 
-`staff.read([ read_api ], [ query ], callback(data));`
+`you.read([ read_api ], [ query ], callback(data));`
 
 If `read_api` isn't set it will return data from _/api/dashboard/json_ only if email and password are set, if they are not it return data from _/api/read/json_.
 
@@ -42,31 +43,31 @@ If `read_api` isn't set it will return data from _/api/dashboard/json_ only if e
 
 _delete_
 
-`staff.delete(id, callback);`
+`you.delete(id, callback);`
 
 _reblog_
 
-`staff.reblog([ id, key ], callback);`
+`you.reblog([ id, key ], callback);`
 
-`staff.reblog([ obj ], callback);`
+`you.reblog([ obj ], callback);`
 
 - _obj_
     - { id : number, key : 'string' [ , comment : 'string', as : 'string' ] }
 
 _like_
 
-`staff.like([ id, key ], callback);`
+`you.like([ id, key ], callback);`
 
-`staff.like([ obj ], callback);`
+`you.like([ obj ], callback);`
 
 - _obj_
     - { id : number, key : 'string' }
 
 _unlike_
 
-`staff.unlike([ id, key ], callback);`
+`you.unlike([ id, key ], callback);`
 
-`staff.unlike([ obj ], callback);`
+`you.unlike([ obj ], callback);`
 
 - _obj_
     - { id : number, key : 'string' }
