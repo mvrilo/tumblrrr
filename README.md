@@ -2,7 +2,7 @@
 
 A Node.JS wrapper for [Tumblr's API].
 
-v0.2
+v0.2.0
 
 Demo
 ---------
