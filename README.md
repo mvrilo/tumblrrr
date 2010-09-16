@@ -2,11 +2,11 @@
 
 A Node.JS wrapper for [Tumblr's API].
 
-v0.1.3
+v0.2
 
 Demo
 ---------
-	var tumblr = require('tumblrrr').Tumblr,
+	var tumblr = require('tumblrrr'),
 		staff = tumblr('staff');
 
 	staff.read('account', function(data){
@@ -16,13 +16,13 @@ Demo
 Usage
 ---------
 
-    var tumblr = require('tumblrrr').Tumblr,
+    var tumblr = require('tumblrrr'),
         you = tumblr('you');
 
 For POST-like methods you must pass email and password, otherwise it will return false.
 If the email or the password are incorrect it will return HTTP 403 (not authorized).
 
-	var tumblr = require('tumblrrr').Tumblr,
+	var tumblr = require('tumblrrr'),
 		you = tumblr('you', 'you@email.com', 'password');
 
 **_Methods:_**
@@ -52,7 +52,8 @@ _reblog_
 `you.reblog([ obj ], callback);`
 
 - _obj_
-    - { id : number, key : 'string' [ , comment : 'string', as : 'string' ] }
+
+- { id : number, key : 'string' [ , comment : 'string', as : 'string' ] }
 
 _like_
 
@@ -61,7 +62,8 @@ _like_
 `you.like([ obj ], callback);`
 
 - _obj_
-    - { id : number, key : 'string' }
+
+- { id : number, key : 'string' }
 
 _unlike_
 
@@ -70,17 +72,22 @@ _unlike_
 `you.unlike([ obj ], callback);`
 
 - _obj_
-    - { id : number, key : 'string' }
+
+- { id : number, key : 'string' }
 
 _write_
 
 `you.write(obj, callback);`
 
-- for _obj_ see [this]
+- For info about _obj_ see [this][write].
 
 _edit_
 
-`soon`
+`you.edit(obj, callback)`
+
+- If `post-id` isn't set, it will return false.
+- You must pass all content parameters for the post's type (e.g. title, body for text posts) even if you are not changing their values.
+- For more info about _obj_ see [this][edit].
 
 **_Debugging:_**
 
@@ -99,7 +106,6 @@ Info
 Future
 ---------
 
-- The `edit` method, soon the be done.
 - The Debugging system.
 - Maybe working on a better syntax.
 - Got some more ideas? Fork it, or let me know: mvrilo@gmail.com
@@ -112,5 +118,6 @@ See [LICENSE]
 [parameters]: http://www.tumblr.com/docs/en/api
 [Tumblr's API]: http://www.tumblr.com/docs/en/api
 [demo]: http://www.github.com/mvrilo/tumblrrr/tree/master/demo/
-[this]: http://www.tumblr.com/docs/en/api#api_write
+[write]: http://www.tumblr.com/docs/en/api#api_write
+[edit]: http://www.tumblr.com/docs/en/api#editing_posts
 [LICENSE]: http://www.github.com/mvrilo/tumblrrr/blob/master/LICENSE
