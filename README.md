@@ -106,8 +106,7 @@ Info
 Future
 ---------
 
-- The Debugging system.
-- Maybe working on a better syntax.
+- The debugging system.
 - Got some more ideas? Fork it, or let me know: mvrilo@gmail.com
 
 License
