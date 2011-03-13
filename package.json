@@ -9,5 +9,5 @@
 	    "url" : "http://github.com/mvrilo/tumblrrr.git"
 	},
 	"main": "./lib/tumblrrr.js",
-	"engines": { "node": ">= 0.2.0" }
+	"engines": { "node": ">= 0.4.0" }
 }
