@@ -2,7 +2,7 @@
 	"name" : "tumblrrr",
 	"description" : "A wrapper for Tumblr's API",
 	"keywords" : ["tumblr", "api", "wrapper"],
-	"version" : "0.2.1",
+	"version" : "0.3.0",
 	"author" : "Murilo Santana <mvrilo@gmail.com>",
 	"repository" : {
 		"type" : "git",
